@@ -1,0 +1,27 @@
+{
+  "name": "serviceworker",
+  "version": "1.0.0",
+  "authors": [
+    "Leo Ørsnes <loe@cabana.dk>"
+  ],
+  "description": "Selective Service Worker",
+  "main": "build/serviceworker.js",
+  "keywords": [
+    "javascript",
+    "cabana",
+    "js",
+    "service worker",
+    "serviceworker",
+    "service",
+    "worker",
+    "leo",
+    "orsnes"
+  ],
+  "ignore": [
+    "src/",
+    "notes.txt",
+    ".gitignore"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Cabana/ServiceWorker"
+}

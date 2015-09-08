@@ -1,6 +1,24 @@
 
 self.addEventListener('fetch', function(event) {
 
+	var isOnline = function() {
+		if ('onLine' in navigator) {
+			return navigator.onLine;
+		} else {
+
+			var connection = navigator.connection || navigator.mozConnection || null;
+
+			if (connection) {
+				return connection.type !== "none";
+			} else {
+				return false;
+			}
+
+		}
+	};
+
+
+
 	var requestURL = new URL(event.request.clone().url);
 
 	if (requestURL.protocol.indexOf('chrome-extension') > -1) {

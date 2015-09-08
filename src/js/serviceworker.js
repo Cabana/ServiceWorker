@@ -18,14 +18,6 @@ var cacheList = [
 //= include serviceworker/core/noCacheRequest.js
 //= include serviceworker/core/cleanRequest.js
 
-var isOnline = function() {
-	if ('onLine' in navigator) {
-		return navigator.onLine;
-	} else {
-		return true;
-	}
-};
-
 
 
 //= include serviceworker/events/install.js

@@ -1,4 +1,4 @@
-var cacheName = "v1.0.0";
+var cacheName = "v1.1.0";
 
 var cacheList = [
 	'/resources/css/app.css',
@@ -17,14 +17,6 @@ var cacheList = [
 //= include serviceworker/core/fetchResource.js
 //= include serviceworker/core/noCacheRequest.js
 //= include serviceworker/core/cleanRequest.js
-
-var isOnline = function() {
-	if ('onLine' in navigator) {
-		return navigator.onLine;
-	} else {
-		return true;
-	}
-};
 
 
 

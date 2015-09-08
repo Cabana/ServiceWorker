@@ -1,4 +1,4 @@
-var cacheName = "v1.0.0";
+var cacheName = "v1.1.0";
 
 var cacheList = [
 	'/resources/css/app.css',
@@ -78,14 +78,6 @@ var cleanRequest = function(request) {
 
 
 
-var isOnline = function() {
-	if ('onLine' in navigator) {
-		return navigator.onLine;
-	} else {
-		return true;
-	}
-};
-
 
 self.addEventListener('install', function(event) {
 
@@ -133,6 +125,24 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('fetch', function(event) {
+
+	var isOnline = function() {
+		if ('onLine' in navigator) {
+			return navigator.onLine;
+		} else {
+
+			var connection = navigator.connection || navigator.mozConnection || null;
+
+			if (connection) {
+				return connection.type !== "none";
+			} else {
+				return false;
+			}
+
+		}
+	};
+
+
 
 	var requestURL = new URL(event.request.clone().url);
 

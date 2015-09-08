@@ -1,4 +1,4 @@
-var cacheName = "v1.0.0";
+var cacheName = "v1.1.0";
 
 var cacheList = [
 	'/resources/css/app.css',
